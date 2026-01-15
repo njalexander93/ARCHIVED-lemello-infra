@@ -1,4 +1,33 @@
+# =========================
+# Terraform
+# =========================
 .terraform/
+
+# Terraform state (NEVER COMMIT)
 *.tfstate
 *.tfstate.*
+
+# Variable files (may contain secrets)
 *.tfvars
+*.tfvars.json
+
+# Overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Environment / Secrets
+.env
+.env.*
+!.env.template
+
+# Logs
+*.log
+
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
