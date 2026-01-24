@@ -1,4 +1,4 @@
-<h1><img src=".github/assets/lemello-horizontal-yellow.svg" alt="Lemello" height="28px" vertical-align="middle"> Infrastructure</h1>
+<h1><img src=".github/assets/lemello-horizontal-yellow.svg" alt="Lemello" height="28px"> Infrastructure</h1>
 
 This repository contains the **Infrastructure as Code (IaC)** for Lemello, managed using **Terraform** and deployed on **DigitalOcean**.
 
