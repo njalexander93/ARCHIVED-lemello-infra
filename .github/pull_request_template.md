@@ -12,29 +12,39 @@ Fixes: LMLO-XXX
 
 ---
 
-## API Surface Changes
+## Infrastructure Changes
 
-<!-- Document any changes to endpoints, request/response schemas, or models -->
-<!-- Mark as N/A if there are no API changes -->
+<!-- Describe the infrastructure components affected -->
+<!-- Examples: Terraform modules, networking, IAM, CI/CD, cloud resources -->
+<!-- Mark as N/A if not applicable -->
 
 ---
 
-## Database / Migration Changes
+## State / Backend Impact
 
-<!-- Describe any schema changes, migrations, or data model updates -->
-<!-- Mark as N/A if there are no database changes -->
+<!-- Describe any changes to Terraform state, backend config, or providers -->
+<!-- Note if this introduces a new state file or modifies existing state -->
+<!-- Mark as N/A if not applicable -->
 
 ---
 
 ## Manual Testing Performed
 
-<!-- Describe the testing you performed locally -->
-<!-- Include test commands, sample requests, and expected outputs -->
+<!-- Describe the validation you performed locally or in CI -->
+<!-- Include commands and expected results -->
+
+- [ ] `terraform fmt -recursive`
+- [ ] `terraform validate`
+- [ ] `terraform plan` executed successfully
+- [ ] Plan reviewed for unintended resource changes
+- [ ] No secrets committed or exposed
+- [ ] CI checks pass
 
 ---
 
 ## Risk Assessment and Rollout Notes
 
-<!-- Identify any risks or special considerations for deployment -->
-<!-- Note any required environment variable changes, feature flags, or configuration updates -->
+<!-- Identify any risks or special considerations for apply -->
+<!-- Note destructive changes, IAM/network modifications, or downtime risk -->
+<!-- Include rollback strategy if applicable -->
 <!-- Mark as Low Risk if this is a straightforward change -->
