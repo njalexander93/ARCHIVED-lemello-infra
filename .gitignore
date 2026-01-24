@@ -1,11 +1,21 @@
-# =========================
 # Terraform
-# =========================
 .terraform/
 
 # Terraform state (NEVER COMMIT)
 *.tfstate
 *.tfstate.*
+
+# Terraform plan files (may contain secrets)
+*.tfplan
+*.plan
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# Terraform CLI config (may contain credentials)
+.terraformrc
+terraform.rc
 
 # Variable files (may contain secrets)
 *.tfvars
@@ -25,9 +35,11 @@ override.tf.json
 # Logs
 *.log
 
-# =========================
+# OS
 .DS_Store
 Thumbs.db
+
+# IDE / Editor
 .vscode/
 .idea/
 *.swp
