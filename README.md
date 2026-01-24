@@ -10,7 +10,7 @@ It is responsible for provisioning and managing all shared cloud resources, incl
 - DigitalOcean Spaces (Object Storage)
 - DNS and SSL configuration
 
-This repository is environment-agnostic and supports multiple environments (dev, staging, production) through variable configuration.
+This repository is environment-agnostic and currently supports multiple environments (staging and production) through variable configuration. Additional environments (for example, a separate dev environment) can be added using the same pattern.
 
 ---
 
