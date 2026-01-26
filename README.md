@@ -33,6 +33,30 @@ This repository is environment-agnostic and currently supports multiple environm
 
 ---
 
+## Environment Setup
+
+1. Copy the environment template:
+
+```bash
+cp .env.template .env
+```
+
+2. Configure local database and cache values (used by Docker Compose for local services):
+
+| Variable | Description | How to Get |
+|----------|-------------|------------|
+| `POSTGRES_PASSWORD` | Password for the local Postgres superuser (required) | Choose a strong local password. If you change this, also update any `DATABASE_URL` values (in this repo and dependent repos) to use the same credentials. |
+| `REDIS_PASSWORD` | Password for the local Redis instance (optional for local dev; may be left empty to disable Redis auth) | Choose a strong local password if you enable auth and ensure `REDIS_URL` (in this repo and dependent repos) includes the same password. If you leave this empty to disable auth, also remove or clear the password segment from `REDIS_URL` so clients do not attempt authentication. |
+
+3. Keep values aligned across repos:
+
+- `backend` uses matching `DATABASE_URL` and `REDIS_URL`; if you change any `POSTGRES_*` or `REDIS_*` variables, also update the corresponding `DATABASE_URL` / `REDIS_URL` in each repo
+- `webapp` should point at the same local backend API port
+
+4. See `.env.template` for the full list of defaults and options.
+
+---
+
 ## Technology Stack
 
 | Component          | Version/Service           | Rationale                                                     |
