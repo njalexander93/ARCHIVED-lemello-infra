@@ -41,12 +41,12 @@ This repository is environment-agnostic and currently supports multiple environm
 cp .env.template .env
 ```
 
-2. Configure required values (used by Docker Compose for local services):
+2. Configure local database and cache values (used by Docker Compose for local services):
 
 | Variable | Description | How to Get |
 |----------|-------------|------------|
-| `POSTGRES_PASSWORD` | Password for the local Postgres superuser | Choose a strong local password |
-| `REDIS_PASSWORD` | Password for the local Redis instance | Choose a strong local password |
+| `POSTGRES_PASSWORD` | Password for the local Postgres superuser (required) | Choose a strong local password |
+| `REDIS_PASSWORD` | Password for the local Redis instance (optional for local dev; may be left empty to disable Redis auth) | Choose a strong local password if you enable auth |
 
 3. Keep values aligned across repos:
 
