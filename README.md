@@ -33,6 +33,30 @@ This repository is environment-agnostic and currently supports multiple environm
 
 ---
 
+## Environment Setup
+
+1. Copy the environment template:
+
+```bash
+cp .env.template .env
+```
+
+2. Configure required values (used by Docker Compose for local services):
+
+| Variable | Description | How to Get |
+|----------|-------------|------------|
+| `POSTGRES_PASSWORD` | Password for the local Postgres superuser | Choose a strong local password |
+| `REDIS_PASSWORD` | Password for the local Redis instance | Choose a strong local password |
+
+3. Keep values aligned across repos:
+
+- `backend` uses matching `DATABASE_URL` and `REDIS_URL`
+- `webapp` should point at the same local backend API port
+
+4. See `.env.template` for the full list of defaults and options.
+
+---
+
 ## Technology Stack
 
 | Component          | Version/Service           | Rationale                                                     |
